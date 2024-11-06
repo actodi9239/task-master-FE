@@ -18,6 +18,7 @@ function Navbar({ isAuthenticated, handleLogout }) {
                     {isAuthenticated ? (
                         <>
                             <li><Link to="/tasks" className="text-white hover:underline">Tasks</Link></li>
+                            <li><Link to="/user" className="text-white hover:underline">User Profile</Link></li> {/* Enlace a la página User */}
                             <li>
                                 <button onClick={handleLogout} className="text-white hover:underline">
                                     Logout

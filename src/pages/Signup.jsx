@@ -6,7 +6,11 @@ function Signup() {
     const [formData, setFormData] = useState({
         username: '',
         password1: '',
-        password2: ''
+        password2: '',
+        firstName: '',
+        lastName: '',
+        motherLastName: '',
+        phone: ''
     });
     const navigate = useNavigate();
 
@@ -26,7 +30,11 @@ function Signup() {
 
         axios.post('http://localhost:4000/api/users/signup', {
             email: formData.username,
-            password: formData.password1
+            password: formData.password1,
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            motherLastName: formData.motherLastName,
+            phone: formData.phone
         })
         .then(response => {
             alert("User registered successfully!");
@@ -47,6 +55,46 @@ function Signup() {
                         <input 
                             type="text" 
                             name="username" 
+                            onChange={handleChange} 
+                            required 
+                            className="w-full px-4 py-2 mt-1 bg-[#2a2f36] border border-[#3a3f45] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-gray-300">First Name</label>
+                        <input 
+                            type="text" 
+                            name="firstName" 
+                            onChange={handleChange} 
+                            required 
+                            className="w-full px-4 py-2 mt-1 bg-[#2a2f36] border border-[#3a3f45] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-gray-300">Last Name</label>
+                        <input 
+                            type="text" 
+                            name="lastName" 
+                            onChange={handleChange} 
+                            required 
+                            className="w-full px-4 py-2 mt-1 bg-[#2a2f36] border border-[#3a3f45] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-gray-300">Mother's Last Name</label>
+                        <input 
+                            type="text" 
+                            name="motherLastName" 
+                            onChange={handleChange} 
+                            required 
+                            className="w-full px-4 py-2 mt-1 bg-[#2a2f36] border border-[#3a3f45] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-gray-300">Phone</label>
+                        <input 
+                            type="text" 
+                            name="phone" 
                             onChange={handleChange} 
                             required 
                             className="w-full px-4 py-2 mt-1 bg-[#2a2f36] border border-[#3a3f45] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-600"

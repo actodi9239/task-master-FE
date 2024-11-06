@@ -6,6 +6,7 @@ import Signin from './pages/Signin';
 import TaskList from './pages/TaskList';
 import TaskForm from './pages/TaskForm';
 import TaskDetail from './pages/TaskDetail';
+import User from './pages/User'; // Importa la nueva página User
 import Navbar from './components/Navbar';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/" element={isAuthenticated ? <Navigate to="/calendarPage" /> : <Signin onLogin={handleLogin} />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/signin" element={<Signin onLogin={handleLogin} />} />
+                <Route path="/user" element={isAuthenticated ? <User /> : <Navigate to="/signin" />} /> {/* Ruta para la página User */}
                 
                 {isAuthenticated ? (
                     <>
