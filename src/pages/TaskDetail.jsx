@@ -16,7 +16,7 @@ function TaskDetail() {
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-        axios.get(`http://localhost:4000/api/tasks/${id}/`, {
+        axios.get(`https://task-master-be-xzr5.onrender.com/api/tasks/${id}/`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -49,7 +49,7 @@ function TaskDetail() {
             date: task.date // Mantiene la fecha sin la hora
         };
 
-        axios.put(`http://localhost:4000/api/tasks/${id}/`, taskData, {
+        axios.put(`https://task-master-be-xzr5.onrender.com/api/tasks/${id}/`, taskData, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -60,13 +60,14 @@ function TaskDetail() {
             })
             .catch(error => {
                 console.error('There was an error updating the task!', error);
+                alert('Failed to update task: ' + (error.response ? error.response.data.message : error.message));
             });
     };
 
     const handleDelete = () => {
         const token = localStorage.getItem('token');
 
-        axios.delete(`http://localhost:4000/api/tasks/${id}/`, {
+        axios.delete(`https://task-master-be-xzr5.onrender.com/api/tasks/${id}/`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -77,6 +78,7 @@ function TaskDetail() {
             })
             .catch(error => {
                 console.error('There was an error deleting the task!', error);
+                alert('Failed to delete task: ' + (error.response ? error.response.data.message : error.message));
             });
     };
 

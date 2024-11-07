@@ -28,7 +28,7 @@ function Signup() {
             return;
         }
 
-        axios.post('http://localhost:4000/api/users/signup', {
+        axios.post('https://task-master-be-xzr5.onrender.com/api/users/signup', {
             email: formData.username,
             password: formData.password1,
             firstName: formData.firstName,
@@ -42,6 +42,7 @@ function Signup() {
         })
         .catch(error => {
             console.error("There was an error registering the user!", error);
+            alert('Failed to register user: ' + (error.response ? error.response.data.message : error.message)); // Muestra un mensaje de error
         });
     };
 

@@ -15,7 +15,7 @@ function CalendarPage() {
 
         if (token) {
             // Obtener las tareas y convertirlas en eventos para el calendario
-            axios.get('http://localhost:4000/api/tasks/', {
+            axios.get('https://task-master-be-xzr5.onrender.com/api/tasks/', {
                 headers: {
                     'Authorization': `Bearer ${token}`, // Asegúrate de enviar el token
                 },

@@ -15,7 +15,7 @@ function User() {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            axios.get('http://localhost:4000/api/users/me', {
+            axios.get('https://task-master-be-xzr5.onrender.com/api/users/me', {
                 headers: { Authorization: `Bearer ${token}` }
             })
             .then(response => {
@@ -35,7 +35,7 @@ function User() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const token = localStorage.getItem('token');
-        axios.put('http://localhost:4000/api/users/me', userData, {
+        axios.put('https://task-master-be-xzr5.onrender.com/api/users/me', userData, {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then(response => {
