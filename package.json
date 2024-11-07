@@ -2,6 +2,7 @@
   "name": "tasks-front",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/actodi9239/task-master-FE/build",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
