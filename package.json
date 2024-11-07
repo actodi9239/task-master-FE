@@ -2,7 +2,6 @@
   "name": "tasks-front",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/actodi9239.github.io/task-master-FE/build",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -46,7 +45,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.20",
-    "gh-pages": "^6.2.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
   }
