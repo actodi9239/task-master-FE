@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/actodi9239.github.io/task-master-FE/build/static/css/main.df8f1505.css",
+    "main.js": "/actodi9239.github.io/task-master-FE/build/static/js/main.de0cf311.js",
+    "static/js/453.794ab857.chunk.js": "/actodi9239.github.io/task-master-FE/build/static/js/453.794ab857.chunk.js",
+    "index.html": "/actodi9239.github.io/task-master-FE/build/index.html",
+    "main.df8f1505.css.map": "/actodi9239.github.io/task-master-FE/build/static/css/main.df8f1505.css.map",
+    "main.de0cf311.js.map": "/actodi9239.github.io/task-master-FE/build/static/js/main.de0cf311.js.map",
+    "453.794ab857.chunk.js.map": "/actodi9239.github.io/task-master-FE/build/static/js/453.794ab857.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df8f1505.css",
+    "static/js/main.de0cf311.js"
+  ]
+}
