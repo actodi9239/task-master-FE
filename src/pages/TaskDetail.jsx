@@ -41,7 +41,7 @@ function TaskDetail() {
 
     const handleUpdate = () => {
         const token = localStorage.getItem('token');
-        const updatedDescription = task.description + '\n' + additionalDescription;
+        const updatedDescription = task.description + (additionalDescription ? '\n' + additionalDescription : '');
 
         const taskData = {
             status: task.status, // Solo actualiza el estado

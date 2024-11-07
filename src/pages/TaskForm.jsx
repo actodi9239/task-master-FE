@@ -23,13 +23,13 @@ function TaskForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const token = localStorage.getItem('token'); // Obtén el token del almacenamiento local
-    
+
         const taskData = {
             ...formData,
             date: formData.date, // Solo se usa la fecha
             important: formData.important, // Importante o no
         };
-    
+
         axios.post('http://localhost:4000/api/tasks', taskData, {
             headers: {
                 'Content-Type': 'application/json',
@@ -42,6 +42,7 @@ function TaskForm() {
         })
         .catch(error => {
             console.error('There was an error creating the task!', error.response ? error.response.data : error);
+            alert('Failed to create task: ' + (error.response ? error.response.data.message : error.message)); // Muestra un mensaje de error
         });
     };    
 
